@@ -24,9 +24,9 @@ Lots of hot glue was used on the stock Creality board.  I used a small knife and
 The hotend fan on my Ender 3 was bare wire, because it connected to screw terminals on the original Creality mainboard.
 The correct connector is a 2-pin JST-XH plug.  I bought these: https://smile.amazon.com/gp/product/B01MCZE2HM
 
-The positive wire (which was indeed red on my Ender 3) for the fan goes in pin 1 on the JST-XH.  
+The positive wire (which was indeed red on my Ender 3) for the fan goes in pin 0 on the JST-XH.  
 
-[] Re-terminate the hotend fan.
+![Close-up photo of SKR Mini E3 V3 FAN1 connector with noting JST-XH plug pin 1](Fan1-Connector-Detail.png)
 
 ## BLtouch install
 
@@ -35,6 +35,8 @@ Not much to say here other than you don't have to get super fussy with the wire 
 ## New mainboard installation
 
 Again nothing much here, the most notable things are the firmware defaults for the fans.
+
+![Photo of SKR Mini E3 V3 with Fan connectors labeled](Fan-Connectors.png)
 
 * FAN0 on the Mini is the part cooling fan by default.  My connector had blue and yellow wires.
 * FAN2 on the Mini is the enclosure fan.  Red and black wires.
