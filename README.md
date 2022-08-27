@@ -17,7 +17,7 @@ Not much to say here, other than ***take pictures of all the connections***.
 Lots of hot glue was used on the stock Creality board.  I used a small knife and fine needle-nose pliers to remove it, and plenty of force.
 
 * Take pictures of all the connections so you can see the polarity.
-* If you want to save yourself a little time, check your current value for E-Steps.  You can use `M503` to output the current settings.  Write them down or save that output, it might be useful later.  I had only changed my E-Steps.
+* If you want to save yourself a little time, check your current value for E-Steps.  You can use `M503` to output the current settings.  Write them down or save that output, it might be useful later.  I had only changed my E-Steps, so none of the other items were interesting.
 
 ## Re-terminating the hotend fan
 
@@ -86,4 +86,35 @@ In order to make sure your print head doesn't make a nice scrape along your prin
 
 * It's the 2nd item under `Configuration`.
 
+## Rough Bed level
 
+Use your favorite method for 1st layer calibration to get your 1st layer close.  If you're reading this, you probably already have a favorite way to do this already - on the off chance that you don't, give CHEP's method a try: <https://www.youtube.com/watch?v=_EfWVUJjBdA>
+
+This will get your bed level close enough to successfully calibrate your E-Steps.
+
+## E-step calibration
+
+My general process for e-step calibration is to use calipers on a single-wall cube.  It's close enough. This Teaching Tech video is pretty good, too: <https://www.youtube.com/watch?v=rp3r921DBGI>
+
+If you just want to do the quick & dirty caliper method, make a box in your favorite slicer:
+![making a cube in prusaslicer](add-box.png)
+
+I like to make mine 20x20x10 to make it print real fast:
+![20x20x10 box](box-dimensions.png)
+
+Set to 0 Solid top layers and 1 perimeter:
+![Layers and Perimeters setting for box](box-layers.png)
+
+Lastly, set to 0% infill.  Should print real fast, and still give useful results.
+![Print time for the e-step calibration box.](box-printtime.png)
+
+## Z-Probe offset calibration
+
+There are a *ton* of 1st layer calibration g-codes and samples.
+
+CHEP has one here: <https://www.chepclub.com/bed-level.html>
+TeachingTech has an entire site to help with calibration here: <https://teachingtechyt.github.io/calibration.html#firstlayer>
+
+The version of Marlin that ships with the SRK Mini I got did *not* have the z-probe wizard, so I had to manually adjust the z-probe offset.
+
+My favorite way to do this is to set up 9 boxes in my favorite slicer, 20 x 20 x 0.2, at a .2 layer height.
