@@ -117,4 +117,22 @@ TeachingTech has an entire site to help with calibration here: <https://teaching
 
 The version of Marlin that ships with the SRK Mini I got did *not* have the z-probe wizard, so I had to manually adjust the z-probe offset.
 
+### Rough z-probe offset without Marlin Z-Probe Wizard
+
+For a rough z-probe offset, do what's recommended in the Marlin docs for M851: <https://marlinfw.org/docs/gcode/M851.html>.
+
+1. Home the Z Axis.
+2. Raise Z and deploy the probe.
+3. Move Z down slowly until the probe triggers.
+4. Take the current Z value and negate it. (for example, 5.2 becomes -5.2)
+5. Set the Z-Offset via the menus, or with `M851 Z`
+
+### Fine Tuning the Z-Probe offset
+
 My favorite way to do this is to set up 9 boxes in my favorite slicer, 20 x 20 x 0.2, at a .2 layer height.
+
+## Change Slicer settings
+
+### Start GCODE
+
+Insert a `G29` into your start GCODE, after homeing (`G28`).
