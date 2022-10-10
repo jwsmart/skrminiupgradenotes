@@ -1,4 +1,4 @@
-# Ender 3 SRK Mini E3 v3 upgrade notes
+# Ender 3 SKR Mini E3 v3 upgrade notes
 
 My notes on upgrading my Ender 3's to the SKR Mini E3 v3
 Mine is configured to used the stock microswitch for homing Z, and the BLTouch for bed leveling.
